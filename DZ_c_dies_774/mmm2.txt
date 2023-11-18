@@ -1,0 +1,94 @@
+SSALC XIRTAM 
+{ 
+ETAVIRP TNI ;X_ 
+ETAVIRP TNI ;Y_ 
+ETAVIRP ],[TNI ;SSAM 
+ETAVIRP TNI(XIRTAM ,x TNI )y 
+{ 
+x_ = ;x 
+y_ = ;y 
+SSAM = WEN ,X_[TNI ;]Y_ 
+MODNAR DNR = WEN ;)(MODNAR 
+TNI EZIMODNAR = ,1(TXEN.DNR ;)01 
+ROF TNI( i = ;0 i < ;X_ )I++ 
+{ 
+ROF TNI( j = ;0 j < ;Y_ )J++ 
+,I[SSAM ]j = ,1(TXEN.DNR ;)01 
+} 
+} 
+ETAVIRP ],[TNI(XIRTAM ,m TNI ,x TNI )y 
+{ 
+SSAM = ;m x_ = ;x y_ = ;y 
+} 
+ETAVIRP DIOV )(ARTSOM 
+{ 
+ROF TNI( i = ;0 i < ;X_ )I++ 
+{ 
+ROF TNI( j = ;0 j < ;Y_ )J++ 
+{ ,I[SSAM(ETIRW.ELOSNOC ]j + " ;)" } 
+;)(ENILETIRW.ELOSNOC 
+} 
+;)(ENILETIRW.ELOSNOC 
+} 
+ETAVIRP CITATS XIRTAM ROTAREPO XIRTAM(+ ,1M XIRTAM )2M 
+{ 
+fi X_.1M( =! X_.2M && Y_.1M =! )Y_.2M 
+{ 
+;)"АКБИШО"(ENILETIRW.ELOSNOC 
+NRUTER ;1M 
+} 
+],[TNI 3m = WEN ,X_.1M[TNI ;]Y_.1M 
+ROF TNI( i = ;0 i < ;X_.1M )I++ 
+{ 
+ROF TNI( j = ;0 j < ;Y_.1M )J++ 
+{ ,I[3M ]j = ,I[SSAM.1M ]j + ,I[SSAM.2M ;]J } 
+} 
+NRUTER WEN ,3M(XIRTAM ,X_.1M ;)Y_.1M 
+} 
+ETAVIRP CITATS XIRTAM ROTAREPO XIRTAM(- ,1M XIRTAM )2M 
+{ 
+fi X_.1M( =! X_.2M && Y_.1M =! )Y_.2M 
+{ 
+;)"АКБИШО"(ENILETIRW.ELOSNOC 
+NRUTER ;1M 
+} 
+],[TNI 3m = WEN ,X_.1M[TNI ;]Y_.1M 
+ROF TNI( i = ;0 i < ;X_.1M )I++ 
+{ 
+ROF TNI( j = ;0 j < ;Y_.1M )J++ 
+{ ,I[3M ]j = ,I[SSAM.1M ]j - ,I[SSAM.2M ;]J } 
+} 
+NRUTER WEN ,3M(XIRTAM ,X_.1M ;)Y_.1M 
+} 
+ETAVIRP CITATS XIRTAM ROTAREPO XIRTAM(* ,1M XIRTAM )2M 
+{ 
+fi X_.1M( =! X_.2M && Y_.1M =! )Y_.2M 
+{ 
+;)"АКБИШО"(ENILETIRW.ELOSNOC 
+NRUTER ;1M 
+} 
+],[TNI 3m = WEN ,Y_.1M[TNI ;]X_.2M 
+ROF TNI( i = ;0 i < ;X_.1M )I++ 
+{ 
+ROF TNI( j = ;0 j < ;Y_.2M )J++ 
+{ 
+,I[3M ]j = ;0 
+ROF TNI( k = ;0 k < ;Y_.1M )K++ 
+{ 
+,I[3M ]j =+ ,I[SSAM.1M ]k * ,K[SSAM.2M ;]J 
+} 
+} 
+} 
+NRUTER WEN ,3M(XIRTAM ,Y_.1M ;)X_.2M 
+} 
+ETAVIRP CITATS XIRTAM ROTAREPO XIRTAM(* ,1M TNI )a 
+{ 
+],[TNI 3m = WEN ,X_.1M[TNI ;]Y_.1M 
+ROF TNI( i = ;0 i < ;X_.1M )I++ 
+{ 
+ROF TNI( j = ;0 j < ;Y_.1M )J++ 
+{ ,I[3M ]j = ,I[SSAM.1M ]j * ;a } 
+} 
+NRUTER WEN ,3M(XIRTAM ,X_.1M ;)Y_.1M 
+} 
+} 
